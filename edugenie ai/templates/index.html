@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduGenie | AI Learning Assistant</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <!-- Header -->
+        <header class="topbar">
+            <div class="brand">
+                <div class="logo">E</div>
+
+                <div>
+                    <h1>EduGenie</h1>
+                    <p>AI Learning Assistant</p>
+                </div>
+            </div>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                AI Powered
+            </div>
+        </header>
+
+
+        <!-- Hero Section -->
+        <section class="hero">
+
+            <div class="hero-content">
+                <span class="badge">SMART LEARNING PLATFORM</span>
+
+                <h2>
+                    Learn smarter.<br>
+                    Understand faster.
+                </h2>
+
+                <p>
+                    Explore concepts, generate quizzes, summarize content,
+                    and build your learning path with AI.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <div class="section-heading">
+                <div>
+                    <span class="small-title">LEARNING TOOLS</span>
+                    <h2>What would you like to do?</h2>
+                </div>
+            </div>
+
+
+            <!-- Tool Cards -->
+            <section class="tools-grid">
+
+                <form action="/process" method="post" class="tool-card">
+                    <input type="hidden" name="task" value="qa">
+
+                    <div class="tool-icon">?</div>
+
+                    <h3>Question & Answer</h3>
+
+                    <p>
+                        Ask questions and receive AI-powered answers.
+                    </p>
+
+                    <textarea
+                        name="input_text"
+                        placeholder="Enter your question..."
+                        required
+                    ></textarea>
+
+                    <button type="submit">
+                        Ask Question →
+                    </button>
+                </form>
+
+
+                <form action="/process" method="post" class="tool-card">
+                    <input type="hidden" name="task" value="explain">
+
+                    <div class="tool-icon">E</div>
+
+                    <h3>Explain a Topic</h3>
+
+                    <p>
+                        Understand difficult concepts in simple language.
+                    </p>
+
+                    <textarea
+                        name="input_text"
+                        placeholder="Enter a topic..."
+                        required
+                    ></textarea>
+
+                    <button type="submit">
+                        Explain Topic →
+                    </button>
+                </form>
+
+
+                <form action="/process" method="post" class="tool-card">
+                    <input type="hidden" name="task" value="quiz">
+
+                    <div class="tool-icon">Q</div>
+
+                    <h3>Generate Quiz</h3>
+
+                    <p>
+                        Test your knowledge with AI-generated questions.
+                    </p>
+
+                    <textarea
+                        name="input_text"
+                        placeholder="Enter a topic..."
+                        required
+                    ></textarea>
+
+                    <button type="submit">
+                        Create Quiz →
+                    </button>
+                </form>
+
+
+                <form action="/process" method="post" class="tool-card">
+                    <input type="hidden" name="task" value="summarize">
+
+                    <div class="tool-icon">S</div>
+
+                    <h3>Summarize Text</h3>
+
+                    <p>
+                        Convert longer content into a concise summary.
+                    </p>
+
+                    <textarea
+                        name="input_text"
+                        placeholder="Paste your text..."
+                        required
+                    ></textarea>
+
+                    <button type="submit">
+                        Summarize →
+                    </button>
+                </form>
+
+
+                <form action="/process" method="post" class="tool-card learning-card">
+                    <input type="hidden" name="task" value="recommend">
+
+                    <div class="tool-icon">L</div>
+
+                    <h3>Learning Path</h3>
+
+                    <p>
+                        Get a structured path from beginner to advanced.
+                    </p>
+
+                    <textarea
+                        name="input_text"
+                        placeholder="Enter a topic..."
+                        required
+                    ></textarea>
+
+                    <button type="submit">
+                        Build Path →
+                    </button>
+                </form>
+
+            </section>
+
+
+            <!-- Result -->
+            {% if result is not none %}
+
+            <section class="result-section">
+
+                <div class="result-header">
+                    <div>
+                        <span class="small-title">AI RESPONSE</span>
+                        <h2>Your Result</h2>
+                    </div>
+
+                    <span class="result-tag">
+                        Generated
+                    </span>
+                </div>
+
+                <div class="result-box">
+                    <pre>{{ result }}</pre>
+                </div>
+
+            </section>
+
+            {% endif %}
+
+        </main>
+
+
+        <!-- Footer -->
+        <footer>
+            <p>EduGenie • AI-Powered Learning Assistant</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

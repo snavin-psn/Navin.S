@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #172033;
+    min-height: 100vh;
+}
+
+.page {
+    min-height: 100vh;
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #e5eaf2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 7%;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #172b63;
+    color: white;
+
+    border-radius: 12px;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.brand h1 {
+    font-size: 22px;
+    color: #172b63;
+}
+
+.brand p {
+    font-size: 12px;
+    color: #7b8497;
+    margin-top: 3px;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    background: #eef8f2;
+    color: #27804e;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #2caf68;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    background: #172b63;
+    color: white;
+
+    padding: 70px 7%;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 20px;
+
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+
+    color: #dbe5ff;
+}
+
+.hero h2 {
+    margin-top: 20px;
+
+    font-size: 48px;
+    line-height: 1.1;
+
+    letter-spacing: -1px;
+}
+
+.hero p {
+    margin-top: 20px;
+
+    max-width: 650px;
+
+    color: #d8e0f2;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.main-content {
+    width: 86%;
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 55px 0;
+}
+
+.small-title {
+    color: #4b67a1;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+}
+
+.section-heading h2 {
+    margin-top: 8px;
+
+    font-size: 28px;
+
+    color: #172033;
+}
+
+
+/* =========================
+   TOOL GRID
+========================= */
+
+.tools-grid {
+    margin-top: 28px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+.tool-card {
+    background: white;
+
+    border: 1px solid #e2e7ef;
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    box-shadow: 0 8px 25px rgba(27, 43, 74, 0.05);
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.tool-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 14px 35px rgba(27, 43, 74, 0.10);
+}
+
+.tool-icon {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 11px;
+
+    background: #edf2ff;
+    color: #314f9c;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 19px;
+    font-weight: bold;
+
+    margin-bottom: 17px;
+}
+
+.tool-card h3 {
+    font-size: 20px;
+
+    color: #172033;
+}
+
+.tool-card p {
+    margin-top: 8px;
+
+    color: #70798b;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+.tool-card textarea {
+    width: 100%;
+
+    min-height: 95px;
+
+    resize: vertical;
+
+    margin-top: 18px;
+
+    padding: 13px;
+
+    border: 1px solid #dce2ec;
+
+    border-radius: 10px;
+
+    background: #fafbfd;
+
+    color: #172033;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+.tool-card textarea:focus {
+    border-color: #4968ad;
+
+    background: white;
+}
+
+.tool-card textarea::placeholder {
+    color: #9aa3b3;
+}
+
+.tool-card button {
+    margin-top: 14px;
+
+    width: 100%;
+
+    padding: 12px 15px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #172b63;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.tool-card button:hover {
+    background: #263f83;
+}
+
+.learning-card {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+.result-section {
+    margin-top: 45px;
+
+    background: white;
+
+    border: 1px solid #e1e6ef;
+
+    border-radius: 16px;
+
+    padding: 28px;
+
+    box-shadow: 0 8px 25px rgba(27, 43, 74, 0.05);
+}
+
+.result-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+.result-header h2 {
+    margin-top: 7px;
+
+    font-size: 25px;
+}
+
+.result-tag {
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    background: #edf7f1;
+
+    color: #28794c;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.result-box {
+    background: #f7f9fc;
+
+    border: 1px solid #e1e6ef;
+
+    border-radius: 11px;
+
+    padding: 20px;
+
+    overflow-x: auto;
+}
+
+.result-box pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #30394a;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    border-top: 1px solid #e3e7ee;
+
+    background: white;
+
+    color: #8a92a1;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .topbar {
+        padding: 15px 5%;
+    }
+
+    .hero {
+        padding: 50px 5%;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .main-content {
+        width: 90%;
+        padding: 40px 0;
+    }
+
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .learning-card {
+        grid-column: auto;
+    }
+
+    .status {
+        display: none;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .result-header {
+        align-items: flex-start;
+        gap: 15px;
+        flex-direction: column;
+    }
+}
